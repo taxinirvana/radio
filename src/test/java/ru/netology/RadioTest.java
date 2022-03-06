@@ -7,8 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 public class RadioTest {
 
 
-
-
     @Test
     public void test() {
         Radio cond = new Radio();
@@ -34,6 +32,7 @@ public class RadioTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
     public void test2() {
         Radio cond = new Radio();
@@ -46,6 +45,7 @@ public class RadioTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
     public void test3() {
         Radio cond = new Radio();

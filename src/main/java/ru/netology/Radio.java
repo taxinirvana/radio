@@ -11,9 +11,9 @@ public class Radio {
 
     public void setCurrentChannelNext(int currentChannel) {
         if (currentChannel < 9) {
-            currentChannel = currentChannel+1;
+            currentChannel = currentChannel + 1;
         }
-        if (currentChannel +1 >= 9) {
+        if (currentChannel + 1 >= 9) {
             currentChannel = 0;
         }
 
@@ -22,9 +22,9 @@ public class Radio {
 
     public void setCurrentChannelPrev(int currentChannel) {
         if (currentChannel > 0) {
-            currentChannel = currentChannel -1;
+            currentChannel = currentChannel - 1;
         }
-        if (currentChannel -1 <= 0) {
+        if (currentChannel - 1 <= 0) {
             currentChannel = 9;
         }
 
@@ -32,14 +32,14 @@ public class Radio {
     }
 
     public void setCurrentChannel(int currentChannel) {
-        if (currentChannel >= 0){
-            if (currentChannel <= 9){
+        if (currentChannel >= 0) {
+            if (currentChannel <= 9) {
 
-        }
+            }
 
         }
         this.currentChannel = currentChannel;
-        }
+    }
 
     public int getCurrentVolume() {
         return currentVolume;
