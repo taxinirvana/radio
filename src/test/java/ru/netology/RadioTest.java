@@ -179,7 +179,7 @@ public class RadioTest {
 
 
     @Test
-    public void test5() {
+    public void testChannel4() {
         Radio cond = new Radio();
 
         cond.setCurrentChannel(5);
@@ -192,7 +192,7 @@ public class RadioTest {
     }
 
     @Test
-    public void test10() {
+    public void testChannel5() {
         Radio cond = new Radio();
 
         cond.setCurrentChannel(9);
@@ -205,7 +205,7 @@ public class RadioTest {
     }
 
     @Test
-    public void test11() {
+    public void testChannel6() {
         Radio cond = new Radio();
 
         cond.setCurrentChannel(0);
@@ -218,7 +218,7 @@ public class RadioTest {
     }
 
     @Test
-    public void test6() {
+    public void testNext1() {
         Radio cond = new Radio();
 
         cond.setCurrentChannelNext(1);
@@ -231,7 +231,7 @@ public class RadioTest {
     }
 
     @Test
-    public void test7() {
+    public void testNext2() {
         Radio cond = new Radio();
 
         cond.setCurrentChannelNext(9);
