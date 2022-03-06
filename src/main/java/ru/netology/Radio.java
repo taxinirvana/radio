@@ -49,12 +49,18 @@ public class Radio {
         if (currentVolume < 10) {
             currentVolume = currentVolume + 1;
         }
+        if (currentVolume >= 10) {
+            currentVolume = 10;
+        }
         this.currentVolume = currentVolume;
     }
 
     public void setCurrentVolumeMin(int currentVolume) {
         if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
+        }
+        if (currentVolume <= 0) {
+            currentVolume = 0;
         }
         this.currentVolume = currentVolume;
     }
