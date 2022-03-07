@@ -79,7 +79,7 @@ public class RadioTest {
 
         cond.setCurrentChannel(11);
 
-        int expected = 11;
+        int expected = 0;
 
         int actual = cond.getCurrentChannel();
 
@@ -92,7 +92,7 @@ public class RadioTest {
 
         cond.setCurrentChannel(-1);
 
-        int expected = -1;
+        int expected = 0;
 
         int actual = cond.getCurrentChannel();
 

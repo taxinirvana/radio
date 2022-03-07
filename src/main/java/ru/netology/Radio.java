@@ -32,11 +32,12 @@ public class Radio {
     }
 
     public void setCurrentChannel(int currentChannel) {
-        if (currentChannel >= 0) {
-            if (currentChannel <= 9) {
+        if (currentChannel > 9) {
+            return;
 
-            }
-
+        }
+        if (currentChannel < 0) {
+            return;
         }
         this.currentChannel = currentChannel;
     }
