@@ -9,32 +9,9 @@ public class Radio {
         return currentChannel;
     }
 
-    public void setCurrentChannelNext(int currentChannel) {
-        if (currentChannel < 9) {
-            currentChannel = currentChannel + 1;
-        }
-        if (currentChannel + 1 >= 9) {
-            currentChannel = 0;
-        }
-
-        this.currentChannel = currentChannel;
-    }
-
-    public void setCurrentChannelPrev(int currentChannel) {
-        if (currentChannel > 0) {
-            currentChannel = currentChannel - 1;
-        }
-        if (currentChannel - 1 <= 0) {
-            currentChannel = 9;
-        }
-
-        this.currentChannel = currentChannel;
-    }
-
     public void setCurrentChannel(int currentChannel) {
         if (currentChannel > 9) {
             return;
-
         }
         if (currentChannel < 0) {
             return;
@@ -42,27 +19,45 @@ public class Radio {
         this.currentChannel = currentChannel;
     }
 
+    public void CurrentChannelNext() {
+        if (currentChannel <= 8) {
+            currentChannel = currentChannel + 1;
+        } else currentChannel = 0;
+
+    }
+
+    public void CurrentChannelPrev() {
+        if (currentChannel >= 1) {
+            currentChannel = currentChannel - 1;
+        } else currentChannel = 9;
+
+    }
+
+
     public int getCurrentVolume() {
         return currentVolume;
     }
 
-    public void setCurrentVolumeMax(int currentVolume) {
+    public void VolumeMax() {
         if (currentVolume < 10) {
             currentVolume = currentVolume + 1;
         }
-        if (currentVolume >= 10) {
-            currentVolume = 10;
-        }
-        this.currentVolume = currentVolume;
     }
 
-    public void setCurrentVolumeMin(int currentVolume) {
+    public void VolumeMin() {
         if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
+        }
+    }
+
+    public void setCurrentVolume(int currentVolume) {
+        if (currentVolume >= 10) {
+            currentVolume = 10;
         }
         if (currentVolume <= 0) {
             currentVolume = 0;
         }
         this.currentVolume = currentVolume;
     }
+
 }
