@@ -6,14 +6,15 @@ public class Radio {
     private int numberStations = 10;
 
     //создали конструкторы для количества радиостанций
-    public Radio () {
-            }
+    public Radio() {
+    }
 
     public Radio(int numberStations) {
         this.numberStations = numberStations;
     }
+
     //метод, возвращающий количество станций
-    public int getNumberStations () {
+    public int getNumberStations() {
         return numberStations;
     }
 
@@ -31,18 +32,20 @@ public class Radio {
         this.currentChannel = currentChannel;
     }
 
-    public void CurrentChannelNext() {
+    public void currentChannelNext() {
         if (currentChannel <= numberStations - 2) {
             currentChannel = currentChannel + 1;
-        } else currentChannel = 0;
-
+        } else {
+            currentChannel = 0;
+        }
     }
 
-    public void CurrentChannelPrev() {
+    public void currentChannelPrev() {
         if (currentChannel >= 1) {
             currentChannel = currentChannel - 1;
-        } else currentChannel = numberStations - 1;
-
+        } else {
+            currentChannel = numberStations - 1;
+        }
     }
 
 
@@ -50,13 +53,13 @@ public class Radio {
         return currentVolume;
     }
 
-    public void VolumeMax() {
+    public void volumeMax() {
         if (currentVolume < 100) {
             currentVolume = currentVolume + 1;
         }
     }
 
-    public void VolumeMin() {
+    public void volumeMin() {
         if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
         }
