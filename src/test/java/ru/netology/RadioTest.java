@@ -11,7 +11,7 @@ public class RadioTest {
     public void testNext() {
         Radio cond = new Radio();
         cond.setCurrentChannel(8);
-        cond.CurrentChannelNext();
+        cond.currentChannelNext();
 
         int expected = 9;
 
@@ -25,7 +25,7 @@ public class RadioTest {
         Radio cond = new Radio();
         cond.setCurrentChannel(-1);
 
-        cond.CurrentChannelNext();
+        cond.currentChannelNext();
 
 
         int expected = 1;
@@ -40,7 +40,7 @@ public class RadioTest {
         Radio cond = new Radio();
         cond.setCurrentChannel(9);
 
-        cond.CurrentChannelNext();
+        cond.currentChannelNext();
 
         int expected = 0;
 
@@ -54,7 +54,7 @@ public class RadioTest {
         Radio cond = new Radio();
         cond.setCurrentChannel(10);
 
-        cond.CurrentChannelNext();
+        cond.currentChannelNext();
 
         int expected = 1;
 
@@ -68,7 +68,7 @@ public class RadioTest {
     public void testPrev() {
         Radio cond = new Radio();
         cond.setCurrentChannel(-1);
-        cond.CurrentChannelPrev();
+        cond.currentChannelPrev();
 
         int expected = 9;
 
@@ -81,7 +81,7 @@ public class RadioTest {
     public void testPrev1() {
         Radio cond = new Radio();
         cond.setCurrentChannel(0);
-        cond.CurrentChannelPrev();
+        cond.currentChannelPrev();
 
         int expected = 9;
 
@@ -94,7 +94,7 @@ public class RadioTest {
     public void testPrev2() {
         Radio cond = new Radio();
         cond.setCurrentChannel(1);
-        cond.CurrentChannelPrev();
+        cond.currentChannelPrev();
 
         int expected = 0;
 
@@ -189,7 +189,7 @@ public class RadioTest {
         Radio cond = new Radio();
         cond.setCurrentVolume(9);
 
-        cond.VolumeMax();
+        cond.volumeMax();
 
         int expected = 10;
 
@@ -202,7 +202,7 @@ public class RadioTest {
     public void testMax() {
         Radio cond = new Radio();
         cond.setCurrentVolume(11);
-        cond.VolumeMax();
+        cond.volumeMax();
 
         int expected = 10;
 
@@ -215,7 +215,7 @@ public class RadioTest {
     public void testMaxi() {
         Radio cond = new Radio();
         cond.setCurrentVolume(8);
-        cond.VolumeMax();
+        cond.volumeMax();
 
         int expected = 9;
 
@@ -229,7 +229,7 @@ public class RadioTest {
     public void testMinimum() {
         Radio cond = new Radio();
         cond.setCurrentVolume(5);
-        cond.VolumeMin();
+        cond.volumeMin();
 
         int expected = 4;
 
@@ -242,7 +242,7 @@ public class RadioTest {
     public void testMin() {
         Radio cond = new Radio();
         cond.setCurrentVolume(-1);
-        cond.VolumeMin();
+        cond.volumeMin();
 
         int expected = 0;
 
@@ -255,7 +255,7 @@ public class RadioTest {
     public void testMini() {
         Radio cond = new Radio();
         cond.setCurrentVolume(0);
-        cond.VolumeMin();
+        cond.volumeMin();
 
         int expected = 0;
 
@@ -264,17 +264,4 @@ public class RadioTest {
         assertEquals(expected, actual);
     }
 
-
-    @Test
-    public void testNext3hfkrikuh() {
-        Radio cond = new Radio();
-        cond.setCurrentChannel(0);
-        cond.CurrentChannelNext();
-
-        int expected = 1;
-
-        int actual = cond.getCurrentChannel();
-
-        assertEquals(expected, actual);
-    }
 }

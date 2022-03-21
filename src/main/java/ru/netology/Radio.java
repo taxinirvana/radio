@@ -19,17 +19,21 @@ public class Radio {
         this.currentChannel = currentChannel;
     }
 
-    public void CurrentChannelNext() {
+    public void currentChannelNext() {
         if (currentChannel <= 8) {
             currentChannel = currentChannel + 1;
-        } else currentChannel = 0;
+        } else {
+            currentChannel = 0;
+        }
 
     }
 
-    public void CurrentChannelPrev() {
+    public void currentChannelPrev() {
         if (currentChannel >= 1) {
             currentChannel = currentChannel - 1;
-        } else currentChannel = 9;
+        } else {
+            currentChannel = 9;
+        }
 
     }
 
@@ -38,13 +42,13 @@ public class Radio {
         return currentVolume;
     }
 
-    public void VolumeMax() {
+    public void volumeMax() {
         if (currentVolume < 10) {
             currentVolume = currentVolume + 1;
         }
     }
 
-    public void VolumeMin() {
+    public void volumeMin() {
         if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
         }
