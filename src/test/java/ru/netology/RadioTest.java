@@ -6,14 +6,21 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class RadioTest {
 
+    //тест на количество радиостанций
+    @Test
+    public void testNumberOfStation() {
+        Radio cond = new Radio(7);
+        assertEquals(7, cond.getNumberStations());
+    }
+
     //тесты на переключение канала на +1
     @Test
     public void testNext() {
-        Radio cond = new Radio();
-        cond.setCurrentChannel(8);
+        Radio cond = new Radio(7);
+        cond.setCurrentChannel(6);
         cond.CurrentChannelNext();
 
-        int expected = 9;
+        int expected = 0;
 
         int actual = cond.getCurrentChannel();
 
@@ -201,10 +208,10 @@ public class RadioTest {
     @Test
     public void testMax() {
         Radio cond = new Radio();
-        cond.setCurrentVolume(11);
+        cond.setCurrentVolume(101);
         cond.VolumeMax();
 
-        int expected = 10;
+        int expected = 100;
 
         int actual = cond.getCurrentVolume();
 
